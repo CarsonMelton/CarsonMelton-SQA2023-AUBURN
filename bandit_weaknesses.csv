@@ -1,25 +1,142 @@
-Run started:2023-04-26 15:50:33.694268
+Run started:2023-04-29 17:43:01.717047
 
 Test results:
-	No issues identified.
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/helm.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:8:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+7	_test_yaml          = 'TEST_ARTIFACTS/dataimage.airflowimage.manifests.deployment.yaml'
+8	_secret_yaml1       = 'TEST_ARTIFACTS/helm.values.yaml'
+9	_secret_yaml2       = 'TEST_ARTIFACTS/tango.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/tango.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:9:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+8	_secret_yaml1       = 'TEST_ARTIFACTS/helm.values.yaml'
+9	_secret_yaml2       = 'TEST_ARTIFACTS/tango.values.yaml'
+10	_secret_yaml3       = 'TEST_ARTIFACTS/charts.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/charts.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:10:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+9	_secret_yaml2       = 'TEST_ARTIFACTS/tango.values.yaml'
+10	_secret_yaml3       = 'TEST_ARTIFACTS/charts.values.yaml'
+11	_secret_yaml4       = 'TEST_ARTIFACTS/skampi.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/skampi.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:11:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+10	_secret_yaml3       = 'TEST_ARTIFACTS/charts.values.yaml'
+11	_secret_yaml4       = 'TEST_ARTIFACTS/skampi.values.yaml'
+12	_secret_yaml5       = 'TEST_ARTIFACTS/minecraft.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/minecraft.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:12:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+11	_secret_yaml4       = 'TEST_ARTIFACTS/skampi.values.yaml'
+12	_secret_yaml5       = 'TEST_ARTIFACTS/minecraft.values.yaml'
+13	_secret_yaml6       = 'TEST_ARTIFACTS/kubecf.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/kubecf.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:13:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+12	_secret_yaml5       = 'TEST_ARTIFACTS/minecraft.values.yaml'
+13	_secret_yaml6       = 'TEST_ARTIFACTS/kubecf.values.yaml'
+14	_secret_yaml7       = 'TEST_ARTIFACTS/nextcloud.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/nextcloud.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:14:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+13	_secret_yaml6       = 'TEST_ARTIFACTS/kubecf.values.yaml'
+14	_secret_yaml7       = 'TEST_ARTIFACTS/nextcloud.values.yaml'
+15	_secret_yaml8       = 'TEST_ARTIFACTS/keycloak.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/keycloak.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:15:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+14	_secret_yaml7       = 'TEST_ARTIFACTS/nextcloud.values.yaml'
+15	_secret_yaml8       = 'TEST_ARTIFACTS/keycloak.values.yaml'
+16	_secret_yaml9       = 'TEST_ARTIFACTS/empty.yml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/empty.yml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:16:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+15	_secret_yaml8       = 'TEST_ARTIFACTS/keycloak.values.yaml'
+16	_secret_yaml9       = 'TEST_ARTIFACTS/empty.yml'
+17	_secret_yaml10      = 'TEST_ARTIFACTS/kubecf.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/kubecf.values.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:17:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+16	_secret_yaml9       = 'TEST_ARTIFACTS/empty.yml'
+17	_secret_yaml10      = 'TEST_ARTIFACTS/kubecf.values.yaml'
+18	_cert_yaml          = 'TEST_ARTIFACTS/sni.values.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'TEST_ARTIFACTS/special.secret1.yaml'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/TEST_CONSTANTS.py:106:22
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+105	fp_no_reso_yaml10   = 'TEST_ARTIFACTS/fp.no.reso10.yaml'
+106	special_secret_1    = 'TEST_ARTIFACTS/special.secret1.yaml'
+107	cap_module_script   = 'TEST_ARTIFACTS/cap-module-ostk.yaml'
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'Secret'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   Location: /Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/constants.py:81:31
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html
+80	NAMESPACE_KW                 = 'namespace'
+81	SECRET_KW                    = 'Secret'
+82	
+83	SECRET_USER_LIST             = ['user']
+
+--------------------------------------------------
 
 Code scanned:
-	Total lines of code: 0
+	Total lines of code: 2262
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 0
+		Low: 12
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
-		Medium: 0
+		Medium: 12
 		High: 0
-Files skipped (3):
-	/Users/carson/Desktop/Spring (No such file or directory)
-	2023/Software (No such file or directory)
-	QA/Project/CarsonMelton-SQA2023-AUBURN (No such file or directory)
+Files skipped (0):
