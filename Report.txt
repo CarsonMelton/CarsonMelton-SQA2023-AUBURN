@@ -1,0 +1,26 @@
+Report for Final Project
+
+# 1
+Executing bandit during the commit action was completed by adding a bandit -r command to the pre-commit file associated
+with my repository. This action recursively checks for security weaknesses inside the repository. A screenshot of the pre-commit
+file is included with my submission.
+
+# 2
+To complete the fuzzing portion of the project, fuzz.py was created to test invalid parameter inputs for various methods
+within parser.py, scanner.py, and graphtaint.py. The invalid strings used in the fuzzing of these methods were collected
+from the text file given from Workhop 8. The command to execute fuzz.py was also added to the pre-commit file so that
+it would be executed during github actions. fuzz.py is located within the Github repository.
+
+# 3 
+The logging portion of the project was created by importing the logging libray in main.py and scanner.py to track the
+execution of these files. logger.py was written to create logging objects so that the recorded output may be collected 
+in output files for review. Screenshots of the included logging calls and the loggin output are included with my submission.
+
+What I learned
+From this project I learned a lot and was able to reinforce many of the ideas introduced by the previous workshops. I was able to
+apply the knowledge gained into real code and get hands-on experience. Analyzing the codebase to create real testing using 
+fuzzing and logging methods allowed me to gain a deeper understanding of the code. Throughout this process I was also able
+to gain a greater understanding of git and how to use it to the fullest of my ability. 
+
+
+
