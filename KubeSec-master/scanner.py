@@ -8,7 +8,11 @@ import constants
 import graphtaint 
 import os 
 import pandas as pd 
-import numpy as np 
+import numpy as np
+import logger
+
+logObj = logger.giveMeLoggingObject()
+
 
 def getYAMLFiles(path_to_dir):
     valid_  = [] 
@@ -530,6 +534,7 @@ def scanDockerSock(path_script ):
     return dic  
 
 def runScanner(dir2scan):
+    logObj.info('Beginning Scanner')
     all_content   = [] 
     all_yml_files = getYAMLFiles(dir2scan)
     val_cnt       = 0 
@@ -584,6 +589,7 @@ def runScanner(dir2scan):
 
 
 def scanForHostNetwork(path_script ):
+    logObj.info('Scanning for Host Network')
     dic, lis   = {}, []
     if ( parser.checkIfValidK8SYaml( path_script )  ): 
         cnt = 0 
@@ -609,6 +615,7 @@ def scanForHostNetwork(path_script ):
 
 
 def scanForCAPSYS(path_script ):
+    logObj.info('Scanning for CAPSYS')
     dic, lis   = {}, []
     if ( parser.checkIfValidK8SYaml( path_script )  ): 
         cnt = 0 
@@ -649,6 +656,7 @@ def scanForCAPMODULE(path_script ):
     return dic      
 
 def scanForHostAliases(path_script ):
+    logObj.info('Scanning for Host Aliases')
     dic, lis   = {}, []
     if ( parser.checkIfValidK8SYaml( path_script )  ): 
         cnt = 0 

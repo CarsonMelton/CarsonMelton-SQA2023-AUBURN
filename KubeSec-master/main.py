@@ -6,6 +6,7 @@ Source Code to Run Tool on All Kubernetes Manifests
 import scanner 
 import pandas as pd 
 import constants
+import logger
 
 def getCountFromAnalysis(ls_):
     list2ret           = []
@@ -47,12 +48,13 @@ def getCountFromAnalysis(ls_):
 
 
 if __name__ == '__main__':
-
+    logObj = logger.giveMeLoggingObject()
+    logObj.info('Beginning execution...')
     '''
     DO NOT DELETE ALL IN K8S_REPOS AS TAINT TRACKING RELIES ON BASH SCRIPTS, ONE OF THE STRENGTHS OF THE TOOL 
     '''
-    # ORG_DIR         = '/Users/arahman/K8S_REPOS/GITHUB_REPOS/'
-    # OUTPUT_FILE_CSV = '/Users/arahman/Documents/OneDriveWingUp/OneDrive-TennesseeTechUniversity/Research/Kubernetes/StaticTaint/data/V16_GITHUB_OUTPUT.csv'
+    ORG_DIR         = '/Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master'
+    OUTPUT_FILE_CSV = '/Users/carson/Desktop/Spring 2023/Software QA/Project/CarsonMelton-SQA2023-AUBURN/KubeSec-master/V16_GITHUB_OUTPUT.csv'
 
     # ORG_DIR         = '/Users/arahman/K8S_REPOS/GITLAB_REPOS/'
     # OUTPUT_FILE_CSV = '/Users/arahman/Documents/OneDriveWingUp/OneDrive-TennesseeTechUniversity/Research/Kubernetes/StaticTaint/data/V16_GITLAB_OUTPUT.csv'
@@ -67,7 +69,8 @@ if __name__ == '__main__':
     content_as_ls   = scanner.runScanner( ORG_DIR )
     df_all          = pd.DataFrame( getCountFromAnalysis( content_as_ls ) )
 
-    df_all.to_csv( OUTPUT_FILE_CSV, header= constants.CSV_HEADER , index=False, encoding= constants.CSV_ENCODING ) 
+    df_all.to_csv( OUTPUT_FILE_CSV, header= constants.CSV_HEADER , index=False, encoding= constants.CSV_ENCODING )
+    logObj.info('Execution completed. Output in V16_GITHUB_OUTPUT.csv') 
 
 
 
